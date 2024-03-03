@@ -9,13 +9,14 @@ export class CatsService {
   private params : string = '?type=square&fit=cover&position=centre&width=500&height=500';
   private idCat : string = '';
   private urlBase: string = `https://cataas.com/cat${this.params}&html=false&json=true`;
-  private urlCat: string = `https://cataas.com/cat/${this.idCat}${this.params}`;
+  private urlCat: string = '';
   getCat(): Observable<any> {
     return this._http.get(this.urlBase);
   }
   processCat(data: any): any {
     this.idCat = data._id;
-    return this._http.get(this.urlCat);
+    this.urlCat = `https://cataas.com/cat/${this.idCat}${this.params}`
+    return this.urlCat;
   }
   constructor() { }
 }
