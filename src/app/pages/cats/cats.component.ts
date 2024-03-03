@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, inject } from '@angular/core';
+import { CatsService } from '../../services/cats.service';
 @Component({
   selector: 'app-cats',
   standalone: true,
@@ -8,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrl: './cats.component.css'
 })
 export class CatsComponent {
-
+  private imgGato: string = '';
+  private _catsService = inject(CatsService);
+  insertarGato() {
+    this._catsService.getCat().subscribe(
+      (data) => {
+        this.imgGato = this._catsService.processCat(data);
+      }
+    )
+  }
 }
