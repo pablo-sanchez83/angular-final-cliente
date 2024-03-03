@@ -8,7 +8,7 @@ import { CatsService } from '../../services/cats.service';
   styleUrl: './cats.component.css'
 })
 export class CatsComponent {
-  imgGato: string = '';
+  imgGato: string = '../../assets/loading.svg';
   private _catsService = inject(CatsService);
   insertarGato() {
     this._catsService.getCat().subscribe(
