@@ -3,27 +3,28 @@
      gap: 1rem;
      display: grid;
      grid-template-areas:
-      "header header"
-      "sidebar content"
-      "footer footer";
-    
-     grid-template-columns: 250px 1fr;
+      "header"
+      "content"
+      "footer";
+      width: 100vw;
+      height: 100vh;
+     grid-template-columns: 1fr;
      
     }
     
     .content {
-      display: block;
+      display: grid;
+      
+      place-content: center;
       grid-area: content;
+
     }
     /* Media query en CSS */
     @media (width <= 768px) {
-     /* Estilos para cuando el ancho de la ventana es máximo 768px */
      :host {
-      grid-template-columns: 1fr; /* Cambia a una sola columna */
-      /* grid-template-rows: .4fr 1fr .4r; */ /* Comenta esta línea si no la necesitas */
+      grid-template-columns: 1fr;
       grid-template-areas:
        "header"
-       "sidebar"
        "content"
        "footer";
      }
