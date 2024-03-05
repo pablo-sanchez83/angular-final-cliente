@@ -9,5 +9,5 @@ import { Usuario } from '../../../interfaces';
   styleUrl: './usuario.component.css'
 })
 export class UsuarioComponent {
-  @Input() usurario!: Usuario;
+  @Input() usuario!: Usuario;
 }

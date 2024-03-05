@@ -10,6 +10,8 @@
         </tr>
     </thead>
     <tbody>
-        <app-usuario *ngFor="let usuario of usuarios" [usurario]="usuario"></app-usuario>
+        <tr *ngFor="let usuario of usuarios">
+            <app-usuario [usuario]="usuario"></app-usuario>
+        </tr>
     </tbody>
 </table>
