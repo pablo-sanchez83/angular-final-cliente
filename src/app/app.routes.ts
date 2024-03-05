@@ -6,10 +6,9 @@ import { GithubComponent } from './pages/github/github.component';
 
 export const routes: Routes = [
 
-{path: '', component:HomeComponent},
+{path: 'home', component:HomeComponent},
 {path: 'clima', component:ClimaComponent},
 {path: 'cats', component:CatsComponent},
 {path: 'github', component:GithubComponent},
-{path: '**',redirectTo: '',pathMatch:'full' },
-
+{path: '**',redirectTo: 'home',pathMatch:'full' },
 ];
