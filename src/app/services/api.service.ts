@@ -9,8 +9,8 @@ export class ApiService {
   constructor(private httpClient: HttpClient) {}
   
   // Used to make a GET request to the API
-  get<T>(url: string, options: Options): Observable<T> {
-    return this.httpClient.get<T>(url, options) as Observable<T>;
+  get<T>(url: string): Observable<T> {
+    return this.httpClient.get<T>(url) as Observable<T>;
   }
 
   // Used to make a POST request to the API
@@ -24,7 +24,7 @@ export class ApiService {
   }
 
   // Used to make a DELETE request to the API
-  delete<T>(url: string, options: Options): Observable<T> {
-    return this.httpClient.delete<T>(url, options) as Observable<T>;
+  delete<T>(url: string): Observable<T> {
+    return this.httpClient.delete<T>(url) as Observable<T>;
   }
 }
