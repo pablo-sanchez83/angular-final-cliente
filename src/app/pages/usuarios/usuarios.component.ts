@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UsuarioComponent } from '../../components/usuario/usuario.component';
 import { ApiService } from '../../services/api.service';
+import { Usuario } from '../../../interfaces';
 @Component({
   selector: 'app-usuarios',
   standalone: true,
@@ -12,13 +13,16 @@ export class UsuariosComponent {
   constructor (private __apiService: ApiService) {
     this.getUsuarios();
   }
-  usuarios: any;
+  usuarios: Usuario[] = [];
   getUsuarios() {
     this.__apiService.get('http://localhost:3000/usuarios').subscribe(
-      (data) => {
+      (data: Usuario) => {
         this.usuarios = data;
       }
     );
+  }
+  ngOnInit() {
+    this.getUsuarios();
   }
 
 }
