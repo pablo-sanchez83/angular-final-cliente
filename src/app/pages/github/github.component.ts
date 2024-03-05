@@ -1,12 +1,16 @@
+// app.component.ts
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-github',
+  selector: 'app-root',
   standalone: true,
-  imports: [],
+  imports : [
+    FormsModule
+  ],
   templateUrl: './github.component.html',
-  styleUrl: './github.component.css'
+  styleUrls: ['./github.component.css']
 })
-export class GithubComponent {
-
+export class AppComponent {
+  githubUser = '';
 }
