@@ -11,6 +11,6 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './github.component.html',
   styleUrls: ['./github.component.css']
 })
-export class AppComponent {
+export class GithubComponent {
   githubUser = '';
 }
