@@ -12,7 +12,7 @@ export class GithubService {
   }
   procesarDatosGithub(data: any): any {
     return {
-      nombre: data.name,
+      nombre: data.login,
       img: data.avatar_url,
       followers: data.followers,
       following: data.following,
