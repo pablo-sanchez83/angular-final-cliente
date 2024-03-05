@@ -32,5 +32,5 @@ export interface Usuario {
     apellido: string;
     edad: number;
     ciudad: string;
-    ocupación: string;
+    ocupacion: string;
   }
