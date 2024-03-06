@@ -13,7 +13,9 @@ export class UsuarioService {
   getUsuarios(page: number, perPage: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/usuarios?page=${page}&perPage=${perPage}`);
   }
-
+  deleteUsuario(id: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/usuarios/${id}`);
+  }
   createUsuario(usuario: any): Observable<any> {
     return this.http.post(`${this.baseUrl}/usuarios`, usuario);
   }
