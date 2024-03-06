@@ -7,7 +7,7 @@
       "content"
       "footer";
       width: 100vw;
-      height: 100vh;
+      min-height: 100vh;
      grid-template-columns: 1fr;
      overflow-x: hidden;
      
