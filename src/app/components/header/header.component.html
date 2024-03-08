@@ -1,40 +1,59 @@
+<!-- Barra de navegación del sitio web -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-    <div class="container">
-        <a class="navbar-brand" routerLink="">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" routerLink="" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-            </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-        </div>
+  <div class="container">
+    <!-- Enlace de la marca de la barra de navegación, que lleva a la página de inicio -->
+    <a class="navbar-brand" routerLink='home'>
+      <!-- Imagen de perfil de GitHub del propietario -->
+      <img src="https://github.com/pablo-sanchez83.png" alt="github profile pic" width="50" height="50"> Pablo
+    </a>
+    <!-- Botón para expandir y colapsar la barra de navegación en dispositivos móviles -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Contenedor de los elementos de la barra de navegación -->
+    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+      <!-- Lista de enlaces de navegación -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <!-- Cada elemento de la lista es un enlace a una página diferente del sitio web -->
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" routerLink='home'><i class="fa-solid fa-house"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="cats"><i class="fa-solid fa-paw"></i> Cats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="github"><i class="fa-brands fa-github-alt"></i> GitHub</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="clima"><i class="fa-solid fa-cloud"></i> Clima</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="server"><i class="fa-solid fa-server"></i> Servidor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="calculadora"><i class="fa-solid fa-calculator"></i> Calculadora</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="galeria"><i class="fa-solid fa-images"></i> Galeria</a>
+        </li>
+      </ul>
+      <!-- Campo de búsqueda en la barra de navegación -->
+      <div class="d-flex">
+        <input class="form-control me-2" type="search" list="search" [(ngModel)]="search" placeholder="Buscar"
+          aria-label="Search">
+        <button class="btn btn-outline-success" (click)="buscar()"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
     </div>
+  </div>
 </nav>
+<!-- Lista de sugerencias para el campo de búsqueda -->
+<datalist id="search">
+  <option value="Cats"></option>
+  <option value="Cats"></option>
+  <option value="Clima"></option>
+  <option value="GitHub"></option>
+  <option value="Servidor"></option>
+  <option value="Calculadora"></option>
+  <option value="Galeria"></option>
+</datalist>

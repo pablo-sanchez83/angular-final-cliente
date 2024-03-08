@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="mb-3 d-flex gap-3">
+        <!-- Campo de entrada para que el usuario pueda ingresar el nombre de usuario de GitHub -->
+        <input type="text" class="form-control" placeholder="Usuario de GitHub" [(ngModel)]="githubUser">
+        
+        <!-- Botón que, al hacer clic, llama al método getUser() del componente -->
+        <button type="submit" class="btn btn-primary" (click)="getUser()">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+    
+    <!-- Sección que se muestra solo si btnClick es true -->
+    @if (btnClick) {
+    <div class="card shadow-sm" style="width: 18rem;">
+        <!-- Muestra la imagen de perfil del usuario de GitHub -->
+        <img [src]="datosGithub.img" alt="Imagen de perfil de GitHub" class="card-img-top img-fluid rounded">
+        
+        <div class="card-body">
+            <!-- Muestra el nombre del usuario de GitHub -->
+            <h5 class="card-title">{{ datosGithub.nombre }}</h5>
+            
+            <!-- Muestra "Admin" si el usuario es administrador -->
+            @if (datosGithub.admin) {
+                <p class="card-text text-success">Admin</p>
+            }
+            
+            <!-- Muestra el número de seguidores del usuario -->
+            <p class="card-text"><strong>Seguidores:</strong> {{ datosGithub.followers }}</p>
+            
+            <!-- Muestra el número de usuarios que el usuario está siguiendo -->
+            <p class="card-text"><strong>Siguiendo:</strong> {{ datosGithub.following }}</p>
+            
+            <!-- Enlace al perfil de GitHub del usuario -->
+            <a [href]="datosGithub.enlace" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Ir a GitHub</a>
+        </div>
+    </div>
+    }
+</div>

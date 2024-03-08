@@ -1,0 +1,8 @@
+<!-- Contenedor centrado para el componente de gatos -->
+<div class="d-flex flex-column align-items-center text-center">
+    <!-- Botón para insertar un nuevo gato. Al hacer clic en el botón, se llama al método insertarGato -->
+    <button class="btn btn-danger btn-lg mb-3" (click)="insertarGato()">😺</button>
+    
+    <!-- Imagen del gato. La fuente de la imagen es dinámica y se obtiene de la variable imgGato -->
+    <img src="{{ imgGato }}" alt="Gato" class="img-fluid shadow-sm">
+</div>

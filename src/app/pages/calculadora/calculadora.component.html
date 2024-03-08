@@ -1,0 +1,20 @@
+<!-- Contenedor centrado para la calculadora -->
+<div class="container text-center">
+  <!-- Título de la calculadora -->
+  <h1 class="mt-5">Calculadora</h1>
+  
+  <!-- Campo de entrada para el primer número -->
+  <input class="form-control" [(ngModel)]="num1" placeholder="Número 1">
+  
+  <!-- Campo de entrada para el segundo número -->
+  <input class="form-control" [(ngModel)]="num2" placeholder="Número 2">
+  
+  <!-- Botones para realizar las operaciones de suma, resta, multiplicación y división -->
+  <button (click)="calculate('+')">+</button>
+  <button (click)="calculate('-')">-</button>
+  <button (click)="calculate('*')">*</button>
+  <button (click)="calculate('/')">/</button>
+  
+  <!-- Visualización del resultado -->
+  <h2 class="mt-5 ">Resultado: {{result}}</h2>
+</div>

@@ -1,13 +1,29 @@
 <div class="contenedor">
+   <!-- Título de la aplicación -->
    <h1>Aplicación de Clima</h1>
+   
+   <!-- Campo de entrada para que el usuario pueda ingresar el nombre de una ciudad -->
    <input type="text" [(ngModel)]="ciudad" placeholder="Ingrese una ciudad" aria-label="Ingrese una ciudad">
+   
+   <!-- Botón que, al hacer clic, llama al método buscarCiudad() del componente -->
    <button (click)="buscarCiudad()" id="botonBusqueda">Buscar</button>
+   
+   <!-- Sección que se muestra solo si datosClima.ciudadNombre tiene un valor -->
    @if (datosClima.ciudadNombre) {
     <div id="datosClima">
+     <!-- Muestra el nombre de la ciudad y el país -->
      <h2>{{ datosClima.ciudadNombre }}, {{ datosClima.paisNombre }}</h2>
+     
+     <!-- Muestra la temperatura actual en la ciudad -->
      <p>La temperatura es: {{ datosClima.temperatura }}ºC</p>
+     
+     <!-- Muestra la humedad actual en la ciudad -->
      <p>La humedad es: {{ datosClima.humedad }}%</p>
+     
+     <!-- Muestra un icono que representa el clima actual -->
      <img [src]="datosClima.icono" alt="Icono del clima">
+     
+     <!-- Muestra una descripción del clima actual -->
      <p>La descripción meteorológica es: {{ datosClima.descripcion }}</p>
     </div>
    }

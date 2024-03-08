@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="row">
+        <!-- Bucle que recorre la lista de fotos -->
+        @for (item of photoList; track item.id){
+            <div class="col-sm-4">
+                <!-- Componente Photo que recibe una foto como entrada -->
+                <app-photo [photo]="item"></app-photo>
+            </div>
+        }
+        @empty {
+            <!-- Mensaje que se muestra si la lista de fotos está vacía -->
+            <div class="alert alert-danger">
+                <p>
+                    No se han registrado fotografías por el momento o, 
+                    bien se produjo un error. Por favor, contacte al administrador.
+                </p>
+            </div>
+        }
+    </div>
+</div>
