@@ -1,1 +1,17 @@
-<p>galeria works!</p>
+<div class="container-fluid">
+    <div class="row">
+        @for (item of photoList; track item.id){
+            <div class="col-sm-4">
+                <app-photo [photo]="item"></app-photo>
+            </div>
+        }
+        @empty {
+            <div class="alert alert-danger">
+                <p>
+                    No se han registrado fotografías por el momento o, 
+                    bien se produjo un error. Por favor, contacte al administrador.
+                </p>
+            </div>
+        }
+    </div>
+</div>
