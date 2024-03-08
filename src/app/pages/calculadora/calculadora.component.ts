@@ -17,7 +17,7 @@ export class CalculadoraComponent {
   public calculate(op: string) {
     switch(op) {
       case '+':
-        this.result = this.num1 + this.num2;
+        this.result = +this.num1 + +this.num2;
         break;
       case '-':
         this.result = this.num1 - this.num2;
