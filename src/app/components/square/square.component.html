@@ -1,1 +1,9 @@
-<p>square works!</p>
+@if (!value){
+    <button nbButton>{{ value }}</button>
+}
+@if (value == 'X'){
+    <button nbButton hero status="success">{{ value }}</button>
+}
+@if (value == 'O'){
+    <button nbButton hero status="info">{{ value }}</button>
+}
