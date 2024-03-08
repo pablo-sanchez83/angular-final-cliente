@@ -1,9 +1,12 @@
+// Importamos los módulos necesarios de Angular
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-header',
+  // Indica que este componente puede ser utilizado de forma independiente
   standalone: true,
+  // Lista de módulos a importar
   imports: [
     RouterLink,
     FormsModule],
@@ -11,8 +14,11 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  // Variable para almacenar la búsqueda del usuario
   search: string = '';
+  // Inyectamos el servicio Router en el constructor
   constructor(private router: Router) { }
+  // Método para buscar y navegar a la página correspondiente
   buscar() {
     switch (this.search.toLowerCase()) {
       case 'cats':
