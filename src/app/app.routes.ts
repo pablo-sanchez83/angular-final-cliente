@@ -10,13 +10,13 @@ import { GaleriaComponent } from './pages/galeria/galeria.component';
 
 // Definición de las rutas
 export const routes: Routes = [
-  {path: 'home', component:HomeComponent},
-  {path: 'clima', component:ClimaComponent},
-  {path: 'cats', component:CatsComponent},
-  {path: 'github', component:GithubComponent},
-  {path: 'server', component:UsuariosComponent},
-  {path: 'calculadora', component:CalculadoraComponent},
-  {path: 'galeria', component:GaleriaComponent},
+  {path: 'home', component:HomeComponent, title: 'Home'},
+  {path: 'clima', component:ClimaComponent, title: 'Clima'},
+  {path: 'cats', component:CatsComponent, title: 'Gatos'},
+  {path: 'github', component:GithubComponent, title: 'GitHub'},
+  {path: 'server', component:UsuariosComponent, title: 'Servidor'},
+  {path: 'calculadora', component:CalculadoraComponent, title: 'Calculadora'},
+  {path: 'galeria', component:GaleriaComponent, title: 'Galería'},
   // Ruta por defecto que redirige a 'home'
   {path: '**',redirectTo: 'home',pathMatch:'full' },
 ];
