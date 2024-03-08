@@ -5,7 +5,7 @@ import { CatsComponent } from './pages/cats/cats.component';
 import { GithubComponent } from './pages/github/github.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { CalculadoraComponent } from './pages/calculadora/calculadora.component';
-import { TictactoeComponent } from './pages/tictactoe/tictactoe.component';
+import { TicTacToeComponent } from './pages/tictactoe/tictactoe.component';
 export const routes: Routes = [
 
 {path: 'home', component:HomeComponent},
@@ -14,6 +14,6 @@ export const routes: Routes = [
 {path: 'github', component:GithubComponent},
 {path: 'server', component:UsuariosComponent},
 {path: 'calculadora', component:CalculadoraComponent},
-{path: 'tictactoe', component:TictactoeComponent},
+{path: 'tictactoe', component:TicTacToeComponent},
 {path: '**',redirectTo: 'home',pathMatch:'full' },
 ];
