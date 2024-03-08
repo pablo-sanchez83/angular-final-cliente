@@ -1,1 +1,10 @@
-<p>calculadora works!</p>
+<div class="container text-center">
+    <h1 class="mt-5">Calculadora</h1>
+    <input class="form-control" [(ngModel)]="num1" placeholder="Número 1">
+    <input class="form-control" [(ngModel)]="num2" placeholder="Número 2">
+    <button (click)="calculate('+')">+</button>
+    <button (click)="calculate('-')">-</button>
+    <button (click)="calculate('*')">*</button>
+    <button (click)="calculate('/')">/</button>
+    <h2 class="mt-5 ">Resultado: {{result}}</h2>
+  </div>

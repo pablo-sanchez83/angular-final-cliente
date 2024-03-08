@@ -27,6 +27,9 @@ export class HeaderComponent {
       case 'servidor':
         this.router.navigate(['/server']);
         break;
+      case 'calculadora':
+        this.router.navigate(['/calculadora']);
+        break;
       default:
         this.router.navigate(['/home']);
     }
