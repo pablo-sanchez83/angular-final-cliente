@@ -30,8 +30,8 @@ export class HeaderComponent {
       case 'calculadora':
         this.router.navigate(['/calculadora']);
         break;
-      case 'tictactoe':
-        this.router.navigate(['/tictactoe']);
+      case 'galeria':
+        this.router.navigate(['/galeria']);
         break;
       default:
         this.router.navigate(['/home']);
