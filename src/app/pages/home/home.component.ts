@@ -6,5 +6,6 @@ import { Component} from '@angular/core';
  styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+ img = 'https://picsum.photos/400/200';
  constructor() { }
 }
