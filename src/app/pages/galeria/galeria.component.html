@@ -1,8 +1,8 @@
 <div class="container-fluid">
-    <div class="row">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
         <!-- Bucle que recorre la lista de fotos -->
         @for (item of photoList; track item.id){
-            <div class="col-sm-4">
+            <div>
                 <!-- Componente Photo que recibe una foto como entrada -->
                 <app-photo [photo]="item"></app-photo>
             </div>
