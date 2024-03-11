@@ -39,8 +39,12 @@ export class HeaderComponent {
       case 'galeria':
         this.router.navigate(['/galeria']);
         break;
+      case 'home':
+        this.router.navigate(['/home']);
+        break;
       default:
         this.router.navigate(['/home']);
     }
+    this.search = '';
   }
 }
