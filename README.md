@@ -22,12 +22,12 @@ cd angular-final-cliente
 ```bash
 npm install
 ```
-# Ejecución del Proyecto
+## Ejecución del Proyecto
 Una vez que las dependencias estén instaladas y las configuraciones estén establecidas, puedes ejecutar el proyecto localmente:
 ```bash
 ng s
 ```
 Esto iniciará un servidor de desarrollo y podrás acceder a la aplicación a través de tu navegador en http://localhost:4200.
-# Servidor propio
+## Servidor propio
 Para acceder al servidor propio accede a este proyecto: 
 - https://github.com/pablo-sanchez83/angular-final-servidor
