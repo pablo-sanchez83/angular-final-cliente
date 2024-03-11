@@ -1,27 +1,33 @@
-# Cliente
+# Proyecto Angular 17 con APIs Externas y Conectadas a un Servidor Interno
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+Este repositorio contiene un proyecto desarrollado en Angular 17 que integra APIs externas y APIs conectadas a un servidor interno. A continuación, se proporciona una guía básica para comenzar a trabajar con este proyecto.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Node.js y npm instalados en tu sistema.
+- Angular CLI instalado globalmente (`npm install -g @angular/cli`).
 
-## Code scaffolding
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clona este repositorio en tu máquina local:
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+git clone https://github.com/pablo-sanchez83/angular-final-cliente.git
+```
+2. Navega hasta el directorio del proyecto:
+```bash
+cd angular-final-cliente
+```
+3. Instala las dependencias del proyecto:
+```bash
+npm install
+```
+# Ejecución del Proyecto
+Una vez que las dependencias estén instaladas y las configuraciones estén establecidas, puedes ejecutar el proyecto localmente:
+```bash
+ng s
+```
+Esto iniciará un servidor de desarrollo y podrás acceder a la aplicación a través de tu navegador en http://localhost:4200.
+# Servidor propio
+Para acceder al servidor propio accede a este proyecto: 
+- https://github.com/pablo-sanchez83/angular-final-servidor
